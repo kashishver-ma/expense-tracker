@@ -22,7 +22,7 @@ export default function Home() {
 
   const [newitem, setnewitem] = useState({ name: "", price: "" });
   const [total, setTotal] = useState(0);
-  const additem = async (e) => {
+  const additem = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (newitem.name !== "" && newitem.price !== "") {
       // setitem([...items, newitem]);
